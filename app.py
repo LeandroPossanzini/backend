@@ -1,5 +1,6 @@
 from flask import Flask, request
 from flask_cors import CORS
+from flasgger import Swagger
 from process.user_service import register_user
 from routes.get_by_title import get_by_title_bp
 from routes.register import register_bp
@@ -11,6 +12,22 @@ from routes.create import create_bp
 
 app = Flask(__name__)
 CORS(app)
+
+swagger_config = {
+    "headers": [],
+    "specs": [
+        {
+            "endpoint": 'apispec',
+            "route": '/apispec.json',
+            "rule_filter": lambda rule: True,  
+            "model_filter": lambda tag: True,
+        }
+    ],
+    "static_url_path": "/flasgger_static",
+    "swagger_ui": True,
+    "specs_route": "/docs/"
+}
+swagger = Swagger(app, config=swagger_config)
 
 
 app.register_blueprint(get_by_title_bp)
