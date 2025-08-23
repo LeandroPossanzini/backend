@@ -1,5 +1,8 @@
 python -m venv venv
+#powershell
 .\venv\Scripts\Activate
-pip install -r requirements.txt
+#bash
+source venv/Scripts/activate
+
 pip install flask
 pip install flask_cors
