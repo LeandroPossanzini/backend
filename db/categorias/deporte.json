@@ -1,0 +1,149 @@
+[
+  {
+    "id": "MLA100011",
+    "title": "Smartphone 128GB",
+    "description": "Smartphone con pantalla AMOLED, 128GB de almacenamiento y cámara triple 48MP.",
+    "price": 109999.99,
+    "currency": "ARS",
+    "images": [
+      "https://example.com/images/smartphone1.jpg",
+      "https://example.com/images/smartphone2.jpg"
+    ],
+    "payment_methods": [
+      "Tarjeta de crédito",
+      "MercadoPago"
+    ],
+    "seller": {
+      "id": "SELLER011",
+      "name": "PhoneStore",
+      "reputation": "Platinum",
+      "location": "CABA, Argentina",
+      "sales": 15400
+    },
+    "additional_details": {
+      "stock": 12,
+      "rating": 4.8,
+      "reviews": 2100,
+      "warranty": "12 meses",
+      "category": "Deporte"
+    }
+  },
+  {
+    "id": "MLA100012",
+    "title": "Cámara Fotográfica DSLR",
+    "description": "Cámara DSLR con lente 18-55mm, sensor de 24MP y grabación Full HD.",
+    "price": 149999.99,
+    "currency": "ARS",
+    "images": [
+      "https://example.com/images/camera1.jpg",
+      "https://example.com/images/camera2.jpg"
+    ],
+    "payment_methods": [
+      "Tarjeta de crédito",
+      "MercadoPago",
+      "Transferencia bancaria"
+    ],
+    "seller": {
+      "id": "SELLER012",
+      "name": "FotoPro",
+      "reputation": "Gold",
+      "location": "Mendoza, Argentina",
+      "sales": 6200
+    },
+    "additional_details": {
+      "stock": 8,
+      "rating": 4.7,
+      "reviews": 1150,
+      "warranty": "12 meses",
+      "category": "Deporte"
+    }
+  },
+  {
+    "id": "MLA100013",
+    "title": "Router WiFi 6",
+    "description": "Router con WiFi 6, cobertura hasta 200m² y 4 puertos LAN gigabit.",
+    "price": 21999.99,
+    "currency": "ARS",
+    "images": [
+      "https://example.com/images/router1.jpg",
+      "https://example.com/images/router2.jpg"
+    ],
+    "payment_methods": [
+      "Tarjeta de crédito",
+      "MercadoPago"
+    ],
+    "seller": {
+      "id": "SELLER013",
+      "name": "NetTech",
+      "reputation": "Silver",
+      "location": "Córdoba, Argentina",
+      "sales": 4100
+    },
+    "additional_details": {
+      "stock": 30,
+      "rating": 4.4,
+      "reviews": 590,
+      "warranty": "12 meses",
+      "category": "Deporte"
+    }
+  },
+  {
+    "id": "MLA100014",
+    "title": "Audífonos Deportivos Bluetooth",
+    "description": "Audífonos resistentes al agua, con batería de 15 horas y ajuste ergonómico para deportes.",
+    "price": 17999.99,
+    "currency": "ARS",
+    "images": [
+      "https://example.com/images/sportheadphones1.jpg",
+      "https://example.com/images/sportheadphones2.jpg"
+    ],
+    "payment_methods": [
+      "Tarjeta de crédito",
+      "MercadoPago"
+    ],
+    "seller": {
+      "id": "SELLER014",
+      "name": "SportAudio",
+      "reputation": "Gold",
+      "location": "Rosario, Argentina",
+      "sales": 5200
+    },
+    "additional_details": {
+      "stock": 40,
+      "rating": 4.5,
+      "reviews": 720,
+      "warranty": "6 meses",
+      "category": "Deporte"
+    }
+  },
+  {
+    "id": "MLA100015",
+    "title": "Disco Duro Externo 2TB",
+    "description": "Disco duro externo USB 3.0 de 2TB, portátil y resistente a golpes.",
+    "price": 24999.99,
+    "currency": "ARS",
+    "images": [
+      "https://example.com/images/hdd1.jpg",
+      "https://example.com/images/hdd2.jpg"
+    ],
+    "payment_methods": [
+      "Tarjeta de crédito",
+      "MercadoPago",
+      "Transferencia bancaria"
+    ],
+    "seller": {
+      "id": "SELLER015",
+      "name": "StorageTech",
+      "reputation": "Platinum",
+      "location": "CABA, Argentina",
+      "sales": 10300
+    },
+    "additional_details": {
+      "stock": 20,
+      "rating": 4.6,
+      "reviews": 980,
+      "warranty": "12 meses",
+      "category": "Deporte"
+    }
+  }
+]
