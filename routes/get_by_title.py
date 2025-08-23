@@ -7,7 +7,6 @@ get_by_title_bp = Blueprint("get_by_title_bp", __name__)
 def get_by_title():
     title = request.args.get("title")
     username = request.args.get("username", "desconocido")
-    print(username)
     if not title:
         return jsonify({"error": "Debe proveer un título"}), 400
 
