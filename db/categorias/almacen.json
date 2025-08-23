@@ -1,0 +1,149 @@
+[
+  {
+    "id": "MLA100006",
+    "title": "Auriculares Gaming con Micrófono",
+    "description": "Auriculares con sonido envolvente 7.1 y micrófono retráctil, diseñados para gaming profesional.",
+    "price": 21999.5,
+    "currency": "ARS",
+    "images": [
+      "https://example.com/images/gamingheadset1.jpg",
+      "https://example.com/images/gamingheadset2.jpg"
+    ],
+    "payment_methods": [
+      "Tarjeta de crédito",
+      "MercadoPago",
+      "Transferencia bancaria"
+    ],
+    "seller": {
+      "id": "SELLER006",
+      "name": "GamerStore",
+      "reputation": "Platinum",
+      "location": "Rosario, Argentina",
+      "sales": 11200
+    },
+    "additional_details": {
+      "stock": 35,
+      "rating": 4.6,
+      "reviews": 1020,
+      "warranty": "12 meses",
+      "category": "Almacen"
+    }
+  },
+  {
+    "id": "MLA100007",
+    "title": "Tablet 10 Pulgadas",
+    "description": "Tablet con pantalla HD, 64GB de almacenamiento y sistema operativo Android 13.",
+    "price": 44999.99,
+    "currency": "ARS",
+    "images": [
+      "https://example.com/images/tablet1.jpg",
+      "https://example.com/images/tablet2.jpg"
+    ],
+    "payment_methods": [
+      "Tarjeta de crédito",
+      "MercadoPago"
+    ],
+    "seller": {
+      "id": "SELLER007",
+      "name": "TabStore",
+      "reputation": "Gold",
+      "location": "Mendoza, Argentina",
+      "sales": 5400
+    },
+    "additional_details": {
+      "stock": 28,
+      "rating": 4.5,
+      "reviews": 630,
+      "warranty": "12 meses",
+      "category": "Almacen"
+    }
+  },
+  {
+    "id": "MLA100008",
+    "title": "Parlante Bluetooth Portátil",
+    "description": "Parlante portátil con sonido estéreo, 12 horas de batería y resistencia al agua.",
+    "price": 13999.99,
+    "currency": "ARS",
+    "images": [
+      "https://example.com/images/speaker1.jpg",
+      "https://example.com/images/speaker2.jpg"
+    ],
+    "payment_methods": [
+      "Tarjeta de débito",
+      "MercadoPago"
+    ],
+    "seller": {
+      "id": "SELLER008",
+      "name": "SoundTech",
+      "reputation": "Silver",
+      "location": "CABA, Argentina",
+      "sales": 4100
+    },
+    "additional_details": {
+      "stock": 60,
+      "rating": 4.3,
+      "reviews": 470,
+      "warranty": "6 meses",
+      "category": "Almacen"
+    }
+  },
+  {
+    "id": "MLA100009",
+    "title": "Disco SSD 1TB",
+    "description": "Disco sólido SSD de 1TB con interfaz NVMe para velocidad máxima de lectura/escritura.",
+    "price": 29999.99,
+    "currency": "ARS",
+    "images": [
+      "https://example.com/images/ssd1.jpg",
+      "https://example.com/images/ssd2.jpg"
+    ],
+    "payment_methods": [
+      "Tarjeta de crédito",
+      "MercadoPago",
+      "Transferencia bancaria"
+    ],
+    "seller": {
+      "id": "SELLER009",
+      "name": "MemoryStore",
+      "reputation": "Platinum",
+      "location": "Córdoba, Argentina",
+      "sales": 8900
+    },
+    "additional_details": {
+      "stock": 22,
+      "rating": 4.7,
+      "reviews": 950,
+      "warranty": "12 meses",
+      "category": "Almacen"
+    }
+  },
+  {
+    "id": "MLA100010",
+    "title": "Monitor 24 Pulgadas Full HD",
+    "description": "Monitor LED Full HD de 24 pulgadas con conectividad HDMI y DisplayPort.",
+    "price": 59999.99,
+    "currency": "ARS",
+    "images": [
+      "https://example.com/images/monitor1.jpg",
+      "https://example.com/images/monitor2.jpg"
+    ],
+    "payment_methods": [
+      "Tarjeta de crédito",
+      "MercadoPago"
+    ],
+    "seller": {
+      "id": "SELLER010",
+      "name": "DisplayTech",
+      "reputation": "Gold",
+      "location": "Rosario, Argentina",
+      "sales": 7300
+    },
+    "additional_details": {
+      "stock": 18,
+      "rating": 4.6,
+      "reviews": 780,
+      "warranty": "12 meses",
+      "category": "Almacen"
+    }
+  }
+]
