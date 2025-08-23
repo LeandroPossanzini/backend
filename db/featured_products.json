@@ -1,152 +1,122 @@
 [
-  {
-    "id": "MLA100011",
-    "title": "Smartphone 128GB",
-    "description": "Smartphone con pantalla AMOLED, 128GB de almacenamiento y cámara triple 48MP.",
-    "price": 109999.99,
-    "currency": "ARS",
-    "images": [
-      "https://example.com/images/smartphone1.jpg",
-      "https://example.com/images/smartphone2.jpg"
-    ],
-    "payment_methods": [
-      "Tarjeta de crédito",
-      "MercadoPago"
-    ],
-    "seller": {
-      "id": "SELLER011",
-      "name": "PhoneStore",
-      "reputation": "Platinum",
-      "location": "CABA, Argentina",
-      "sales": 15400
+    {
+        "id": "MLA100011",
+        "title": "Smartphone 128GB",
+        "description": "Smartphone con pantalla AMOLED, 128GB de almacenamiento y c\u00e1mara triple 48MP.",
+        "price": 109999.99,
+        "currency": "ARS",
+        "images": [
+            "https://example.com/images/smartphone1.jpg",
+            "https://example.com/images/smartphone2.jpg"
+        ],
+        "payment_methods": [
+            "Tarjeta de cr\u00e9dito",
+            "MercadoPago"
+        ],
+        "seller": {
+            "id": "SELLER011",
+            "name": "PhoneStore",
+            "reputation": "Platinum",
+            "location": "CABA, Argentina",
+            "sales": 15400
+        },
+        "additional_details": {
+            "stock": 12,
+            "rating": 4.8,
+            "reviews": 2100,
+            "warranty": "12 meses",
+            "category": "Deporte"
+        }
     },
-    "additional_details": {
-      "stock": 12,
-      "rating": 4.8,
-      "reviews": 2100,
-      "warranty": "12 meses",
-      "category": "Deporte"
-    }
-  },
-  {
-    "id": "MLA100004",
-    "title": "Smartwatch Deportivo",
-    "description": "Smartwatch con GPS, monitor de frecuencia cardíaca y resistencia al agua hasta 50 metros.",
-    "price": 29999.99,
-    "currency": "ARS",
-    "images": [
-      "https://example.com/images/smartwatch1.jpg",
-      "https://example.com/images/smartwatch2.jpg"
-    ],
-    "payment_methods": [
-      "Tarjeta de crédito",
-      "MercadoPago"
-    ],
-    "seller": {
-      "id": "SELLER004",
-      "name": "FitTech",
-      "reputation": "Platinum",
-      "location": "CABA, Argentina",
-      "sales": 9700
+    {
+        "id": "MLA100004",
+        "title": "Smartwatch Deportivo",
+        "description": "Smartwatch con GPS, monitor de frecuencia card\u00edaca y resistencia al agua hasta 50 metros.",
+        "price": 29999.99,
+        "currency": "ARS",
+        "images": [
+            "https://example.com/images/smartwatch1.jpg",
+            "https://example.com/images/smartwatch2.jpg"
+        ],
+        "payment_methods": [
+            "Tarjeta de cr\u00e9dito",
+            "MercadoPago"
+        ],
+        "seller": {
+            "id": "SELLER004",
+            "name": "FitTech",
+            "reputation": "Platinum",
+            "location": "CABA, Argentina",
+            "sales": 9700
+        },
+        "additional_details": {
+            "stock": 50,
+            "rating": 4.8,
+            "reviews": 1340,
+            "warranty": "12 meses",
+            "category": "Tecnologia"
+        }
     },
-    "additional_details": {
-      "stock": 50,
-      "rating": 4.8,
-      "reviews": 1340,
-      "warranty": "12 meses",
-      "category": "Tecnologia"
-    }
-  },
-  {
-    "id": "MLA100001",
-    "title": "Auriculares Inalámbricos Bluetooth",
-    "description": "Auriculares inalámbricos con cancelación de ruido, micrófono incorporado y hasta 30 horas de batería. Compatibles con iOS, Android y PC.",
-    "price": 25999.99,
-    "currency": "ARS",
-    "images": [
-      "https://example.com/images/auriculares1.jpg",
-      "https://example.com/images/auriculares2.jpg",
-      "https://example.com/images/auriculares3.jpg"
-    ],
-    "payment_methods": [
-      "Tarjeta de crédito",
-      "Tarjeta de débito",
-      "MercadoPago",
-      "Transferencia bancaria"
-    ],
-    "seller": {
-      "id": "SELLER001",
-      "name": "TechStore Oficial",
-      "reputation": "Platinum",
-      "location": "CABA, Argentina",
-      "sales": 15320
+    {
+        "id": "MLA100001",
+        "title": "Auriculares Inal\u00e1mbricos Bluetooth",
+        "description": "Auriculares inal\u00e1mbricos con cancelaci\u00f3n de ruido, micr\u00f3fono incorporado y hasta 30 horas de bater\u00eda. Compatibles con iOS, Android y PC.",
+        "price": 25999.99,
+        "currency": "ARS",
+        "images": [
+            "https://example.com/images/auriculares1.jpg",
+            "https://example.com/images/auriculares2.jpg",
+            "https://example.com/images/auriculares3.jpg"
+        ],
+        "payment_methods": [
+            "Tarjeta de cr\u00e9dito",
+            "Tarjeta de d\u00e9bito",
+            "MercadoPago",
+            "Transferencia bancaria"
+        ],
+        "seller": {
+            "id": "SELLER001",
+            "name": "TechStore Oficial",
+            "reputation": "Platinum",
+            "location": "CABA, Argentina",
+            "sales": 15320
+        },
+        "additional_details": {
+            "stock": 42,
+            "rating": 4.7,
+            "reviews": 1250,
+            "warranty": "12 meses de garant\u00eda oficial",
+            "category": "Tecnologia"
+        }
     },
-    "additional_details": {
-      "stock": 42,
-      "rating": 4.7,
-      "reviews": 1250,
-      "warranty": "12 meses de garantía oficial",
-      "category": "Tecnologia"
+    {
+        "id": "MLA100006",
+        "title": "Auriculares Gaming con Micr\u00f3fono",
+        "description": "Auriculares con sonido envolvente 7.1 y micr\u00f3fono retr\u00e1ctil, dise\u00f1ados para gaming profesional.",
+        "price": 21999.5,
+        "currency": "ARS",
+        "images": [
+            "https://example.com/images/gamingheadset1.jpg",
+            "https://example.com/images/gamingheadset2.jpg"
+        ],
+        "payment_methods": [
+            "Tarjeta de cr\u00e9dito",
+            "MercadoPago",
+            "Transferencia bancaria"
+        ],
+        "seller": {
+            "id": "SELLER006",
+            "name": "GamerStore",
+            "reputation": "Platinum",
+            "location": "Rosario, Argentina",
+            "sales": 11200
+        },
+        "additional_details": {
+            "stock": 35,
+            "rating": 4.6,
+            "reviews": 1020,
+            "warranty": "12 meses",
+            "category": "Almacen"
+        }
     }
-  },
-  {
-    "id": "MLA100006",
-    "title": "Auriculares Gaming con Micrófono",
-    "description": "Auriculares con sonido envolvente 7.1 y micrófono retráctil, diseñados para gaming profesional.",
-    "price": 21999.5,
-    "currency": "ARS",
-    "images": [
-      "https://example.com/images/gamingheadset1.jpg",
-      "https://example.com/images/gamingheadset2.jpg"
-    ],
-    "payment_methods": [
-      "Tarjeta de crédito",
-      "MercadoPago",
-      "Transferencia bancaria"
-    ],
-    "seller": {
-      "id": "SELLER006",
-      "name": "GamerStore",
-      "reputation": "Platinum",
-      "location": "Rosario, Argentina",
-      "sales": 11200
-    },
-    "additional_details": {
-      "stock": 35,
-      "rating": 4.6,
-      "reviews": 1020,
-      "warranty": "12 meses",
-      "category": "Almacen"
-    }
-  },
-  {
-    "id": "MLA100015",
-    "title": "Disco Duro Externo 2TB",
-    "description": "Disco duro externo USB 3.0 de 2TB, portátil y resistente a golpes.",
-    "price": 24999.99,
-    "currency": "ARS",
-    "images": [
-      "https://example.com/images/hdd1.jpg",
-      "https://example.com/images/hdd2.jpg"
-    ],
-    "payment_methods": [
-      "Tarjeta de crédito",
-      "MercadoPago",
-      "Transferencia bancaria"
-    ],
-    "seller": {
-      "id": "SELLER015",
-      "name": "StorageTech",
-      "reputation": "Platinum",
-      "location": "CABA, Argentina",
-      "sales": 10300
-    },
-    "additional_details": {
-      "stock": 20,
-      "rating": 4.6,
-      "reviews": 980,
-      "warranty": "12 meses",
-      "category": "Deporte"
-    }
-  }
 ]

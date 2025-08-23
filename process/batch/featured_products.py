@@ -1,129 +1,126 @@
 import json
 import os
 import time
-import sys
-
-
 
 RECURRENCY = 2  # minutos entre ejecuciones
 
 # Paths
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-
-# Subo dos niveles: batch -> process -> raíz del proyecto
 BASE_DIR = os.path.dirname(os.path.dirname(CURRENT_DIR))
-ARTICULOS_PATH = os.path.join(BASE_DIR, "db", "articles.json")
-DESTACADOS_PATH = os.path.join(BASE_DIR, "db", "featured_products.json")
-DELTA_IDS_PATH = os.path.join(BASE_DIR, "db", "processed_ids.txt")
-CATEGORIAS_DIR = os.path.join(BASE_DIR, "db", "categorias")
-os.makedirs(CATEGORIAS_DIR, exist_ok=True)
+ARTICLES_PATH = os.path.join(BASE_DIR, "db", "articles.json")
+FEATURED_PATH = os.path.join(BASE_DIR, "db", "featured_products.json")
+PROCESSED_IDS_PATH = os.path.join(BASE_DIR, "db", "processed_ids.txt")
+CATEGORIES_DIR = os.path.join(BASE_DIR, "db", "categories")
+os.makedirs(CATEGORIES_DIR, exist_ok=True)
 
-# Funciones auxiliares
-def leer_articulos():
+
+def load_json(path):
     try:
-        with open(ARTICULOS_PATH, "r", encoding="utf-8") as f:
+        with open(path, "r", encoding="utf-8") as f:
             return json.load(f)
     except FileNotFoundError:
-        print(f"No se encontró {ARTICULOS_PATH}")
+        print(f"File not found: {path}")
         return []
     except json.JSONDecodeError as e:
-        print(f"Error parseando {ARTICULOS_PATH}: {e}")
+        print(f"Error parsing {path}: {e}")
         return []
 
-def leer_ids_procesados():
-    if not os.path.exists(DELTA_IDS_PATH):
+
+def save_json(path, data):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def load_processed_ids():
+    if not os.path.exists(PROCESSED_IDS_PATH):
         return set()
-    with open(DELTA_IDS_PATH, "r", encoding="utf-8") as f:
+    with open(PROCESSED_IDS_PATH, "r", encoding="utf-8") as f:
         return set(line.strip() for line in f)
 
-def guardar_ids_procesados(ids):
-    with open(DELTA_IDS_PATH, "a", encoding="utf-8") as f:
+
+def save_processed_ids(ids):
+    with open(PROCESSED_IDS_PATH, "a", encoding="utf-8") as f:
         for _id in ids:
             f.write(f"{_id}\n")
 
-def guardar_destacados(top5):
+
+def save_featured(top5):
     if not top5:
-        print("No se encontraron productos Platinum nuevos, no se sobrescribe productos_destacados.json")
+        print("No new Platinum products found. Featured products not updated.")
         return
-    with open(DESTACADOS_PATH, "w", encoding="utf-8") as f:
-        json.dump(top5, f, ensure_ascii=False, indent=2)
-    print(f"Productos destacados actualizados en {DESTACADOS_PATH}")
+    save_json(FEATURED_PATH, top5)
+    print(f"Featured products updated: {FEATURED_PATH}")
 
-def generar_archivos_categorias(nuevos_productos):
-    for producto in nuevos_productos:
-        categoria = producto["additional_details"].get("category", "sin_categoria").lower()
-        categoria_file = os.path.join(CATEGORIAS_DIR, f"{categoria}.json")
 
-        # Leer contenido existente
-        if os.path.exists(categoria_file):
-            try:
-                with open(categoria_file, "r", encoding="utf-8") as f:
-                    productos_existentes = json.load(f)
-            except json.JSONDecodeError:
-                productos_existentes = []
-        else:
-            productos_existentes = []
+def generate_category_files(new_products):
+    for product in new_products:
+        category = product.get("additional_details", {}).get("category", "uncategorized").lower()
+        category_file = os.path.join(CATEGORIES_DIR, f"{category}.json")
 
-        productos_existentes.append(producto)
+        existing = load_json(category_file)
+        # Evitar duplicados por ID en categoría
+        existing_dict = {p.get("id"): p for p in existing}
+        existing_dict[product.get("id")] = product
+        save_json(category_file, list(existing_dict.values()))
 
-        # Guardar de nuevo
-        with open(categoria_file, "w", encoding="utf-8") as f:
-            json.dump(productos_existentes, f, ensure_ascii=False, indent=2)
+        print(f"Product {product['id']} added to category '{category}'.")
 
-        print(f"Producto {producto['id']} agregado a categoría '{categoria}' en {categoria_file}")
 
-def generar_destacados_batch():
-    print("Iniciando batch de generación de destacados")
-    productos = leer_articulos()
-    if not productos:
+
+def generate_featured_batch():
+    print("Starting featured products batch...")
+
+    products = load_json(ARTICLES_PATH)
+    if not products:
         return
 
-    ids_procesados = leer_ids_procesados()
+    processed_ids = load_processed_ids()
 
-    # Buscar productos nuevos por ID
-    nuevos_productos = [p for p in productos if p["id"] not in ids_procesados]
-
-    if not nuevos_productos:
-        print("No hay productos nuevos para procesar")
+    # Only new products
+    new_products = [p for p in products if p.get("id") not in processed_ids]
+    if not new_products:
+        print("No new products to process.")
         return
 
-    # Leer destacados actuales si existen
-    if os.path.exists(DESTACADOS_PATH):
-        try:
-            with open(DESTACADOS_PATH, "r", encoding="utf-8") as f:
-                destacados_actuales = json.load(f)
-        except json.JSONDecodeError:
-            destacados_actuales = []
-    else:
-        destacados_actuales = []
+    # Load current featured products
+    featured_current = load_json(FEATURED_PATH)
 
-    # Combinar actuales + nuevos
-    combinados = destacados_actuales + nuevos_productos
+    # Combine current + new but avoid duplicates by ID
+    combined_dict = {p.get("id"): p for p in featured_current}  # start with current
+    for p in new_products:
+        combined_dict[p.get("id")] = p  # overwrite or add
 
-    # Filtrar solo vendedores Platinum
-    platinum = [p for p in combinados if p["seller"]["reputation"] == "Platinum"]
+    combined = list(combined_dict.values())
 
-    # Ordenar por reviews de mayor a menor
-    platinum.sort(key=lambda x: x["additional_details"].get("reviews", 0), reverse=True)
+    # Filter Platinum sellers safely
+    platinum = [
+        p for p in combined
+        if p.get("seller", {}).get("reputation") == "Platinum"
+    ]
 
-    # Quedarse con los mejores 5
+    # Sort by number of reviews descending
+    platinum.sort(key=lambda x: x.get("additional_details", {}).get("reviews", 0), reverse=True)
+
+    # Keep top 5
     top5 = platinum[:5]
 
-    # Guardar los destacados
-    guardar_destacados(top5)
+    # Save featured
+    save_featured(top5)
 
-    # Archivos por categoría
-    generar_archivos_categorias(nuevos_productos)
+    # Save category files
+    generate_category_files(new_products)
 
-    # Guardar IDs procesados
-    nuevos_ids = [p["id"] for p in nuevos_productos]
-    guardar_ids_procesados(nuevos_ids)
+    # Save processed IDs
+    new_ids = [p.get("id") for p in new_products if p.get("id")]
+    save_processed_ids(new_ids)
 
-    print(f"Batch finalizado. Se procesaron {len(nuevos_ids)} productos nuevos")
+    print(f"Batch completed. Processed {len(new_ids)} new products.")
+
 
 
 if __name__ == "__main__":
     while True:
-        generar_destacados_batch()
-        print(f"Esperando {RECURRENCY} minutos para próxima ejecución...")
+        generate_featured_batch()
+        print(f"Waiting {RECURRENCY} minutes for next run...\n")
         time.sleep(RECURRENCY * 60)
