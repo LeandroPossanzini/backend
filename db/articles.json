@@ -2,8 +2,12 @@
     {
         "id": "MLA100001",
         "title": "Auriculares Inal\u00e1mbricos Bluetooth",
-        "description": "Auriculares inal\u00e1mbricos con cancelaci\u00f3n de ruido, micr\u00f3fono incorporado y hasta 30 horas de bater\u00eda. Compatibles con iOS, Android y PC.",
-        "price": 25999.99,
+        "description": [
+            "Auriculares inal\u00e1mbricos con cancelaci\u00f3n de ruido",
+            "micr\u00f3fono incorporado y hasta 30 horas de bater\u00eda. Compatibles con iOS",
+            "Android y PC."
+        ],
+        "price": "100.99",
         "currency": "ARS",
         "images": [
             "https://example.com/images/auriculares1.jpg",
@@ -18,17 +22,20 @@
         ],
         "seller": {
             "id": "SELLER001",
+            "location": [
+                "CABA",
+                "Argentina"
+            ],
             "name": "TechStore Oficial",
             "reputation": "Platinum",
-            "location": "CABA, Argentina",
-            "sales": 15320
+            "sales": "15320"
         },
         "additional_details": {
-            "stock": 42,
-            "rating": 4.7,
-            "reviews": 1250,
-            "warranty": "12 meses de garant\u00eda oficial",
-            "category": "Tecnologia"
+            "category": "Tecnologia",
+            "rating": "4.7",
+            "reviews": "1250",
+            "stock": "42",
+            "warranty": "12 meses de garant\u00eda oficial"
         }
     },
     {
@@ -415,30 +422,27 @@
     },
     {
         "id": "MLA100015",
-        "title": "PRUEBA DESDE POSTMAN''",
-        "description": "Monitor curvo 300 pulgadas Full HD, 144Hz",
-        "price": 120000,
+        "title": "producto desde la web",
+        "description": "algo",
+        "price": 10025.5,
         "currency": "ARS",
         "images": [
-            "https://example.com/monitor1.jpg",
-            "https://example.com/monitor2.jpg"
+            "www.gooogle.com"
         ],
         "payment_methods": [
-            "Efectivo",
-            "Tarjeta",
-            "MercadoPago"
+            "tarjeta"
         ],
         "seller": {
-            "name": "Tech Store",
-            "rating": 4.8,
-            "reputation": "Platinum"
+            "name": "leandro",
+            "rating": 4.2,
+            "reputation": "100"
         },
         "additional_details": {
-            "stock": 42,
-            "rating": 4.7,
-            "reviews": 1980000,
-            "warranty": "12 meses de garant\u00eda oficial",
-            "category": "Tecnologia"
+            "stock": 2,
+            "rating": 6.5,
+            "reviews": 5200,
+            "warranty": "12 meses",
+            "category": "WEB"
         }
     }
 ]

@@ -8,6 +8,75 @@ get_all_bp = Blueprint("get_all_bp", __name__)
 
 @get_all_bp.route("/get_all", methods=["GET"])
 def get_all():
+    """
+    Obtener productos destacados o por última búsqueda
+    ---
+    tags:
+      - Productos
+    description: >
+      Este endpoint devuelve una lista de productos. 
+      - Si se envía un token de autorización válido y el usuario tiene una última búsqueda registrada, se devuelven los productos que coinciden con esa búsqueda.
+      - Si no se envía token o no hay búsqueda previa, se devuelven los productos destacados.
+      No requiere autenticación para acceder.
+    parameters:
+      - name: Authorization
+        in: header
+        type: string
+        required: false
+        description: Token JWT con formato "Bearer <token>"
+    responses:
+      200:
+        description: Lista de productos
+        schema:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              title:
+                type: string
+              description:
+                type: string
+              price:
+                type: number
+              currency:
+                type: string
+              images:
+                type: array
+                items:
+                  type: string
+              seller:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  name:
+                    type: string
+                  location:
+                    type: string
+                  reputation:
+                    type: string
+                  sales:
+                    type: integer
+              additional_details:
+                type: object
+                properties:
+                  category:
+                    type: string
+                  rating:
+                    type: number
+                  reviews:
+                    type: integer
+                  stock:
+                    type: integer
+                  warranty:
+                    type: string
+              payment_methods:
+                type: array
+                items:
+                  type: string
+    """
     auth_header = request.headers.get("Authorization")  # Revisamos si envían Authorization
     token = None
     username = None
@@ -18,7 +87,6 @@ def get_all():
     if username:
         last_search = get_last_search(username)
         if last_search:
-            print(f"Usuario {username} última búsqueda: {last_search}")
             products = process_search(last_search, username)
             return jsonify(products), 200
 
