@@ -1,7 +1,10 @@
-from flask import Flask, request
+import logging
+from flask import Flask
 from flask_cors import CORS
 from flasgger import Swagger
-from process.user_service import register_user
+from config.Config import Config
+
+# Blueprints
 from routes.get_by_title import get_by_title_bp
 from routes.register import register_bp
 from routes.get_all import get_all_bp 
@@ -10,39 +13,33 @@ from routes.update_by_id import update_bp
 from routes.delete_by_id import delete_bp
 from routes.create import create_bp
 
-app = Flask(__name__)
-CORS(app)
+def create_app():
+    app = Flask(__name__)
+    app.config.from_object(Config)
+    CORS(app)
 
-swagger_config = {
-    "headers": [],
-    "specs": [
-        {
-            "endpoint": 'apispec',
-            "route": '/apispec.json',
-            "rule_filter": lambda rule: True,  
-            "model_filter": lambda tag: True,
-        }
-    ],
-    "static_url_path": "/flasgger_static",
-    "swagger_ui": True,
-    "specs_route": "/docs/"
-}
-swagger = Swagger(app, config=swagger_config)
+    # Configuración de Swagger
+    Swagger(app, config=app.config['SWAGGER_CONFIG'])
 
+    # Registro de Blueprints
+    blueprints = [
+        get_by_title_bp,
+        register_bp,
+        get_all_bp,
+        login_bp,
+        update_bp,
+        delete_bp,
+        create_bp
+    ]
+    for bp in blueprints:
+        app.register_blueprint(bp)
 
-app.register_blueprint(get_by_title_bp)
+    # Logging básico
+    logging.basicConfig(level=logging.INFO)
+    logging.info("App Flask inicializada correctamente.")
 
-app.register_blueprint(register_bp)
-
-app.register_blueprint(get_all_bp)
-
-app.register_blueprint(login_bp)
-
-app.register_blueprint(update_bp)
-
-app.register_blueprint(delete_bp)
-
-app.register_blueprint(create_bp)
+    return app
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app = create_app()
+    app.run(debug=app.config['FLASK_DEBUG'])

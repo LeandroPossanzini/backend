@@ -1,3 +1,4 @@
+import logging
 from flask import Blueprint, request, jsonify
 from utils.auth import token_required
 from process.articles_service import update_article_process
@@ -123,11 +124,24 @@ def update_by_id(article_id):
               type: boolean
               example: false
     """
-    new_data = request.json
-    if not new_data:
-        return jsonify({"success": False, "message": "No data provided"}), 400
+    try:
+        new_data = request.get_json()
+        if not new_data:
+            return jsonify({"success": False, "message": "No data provided"}), 400
 
-    result = update_article_process(article_id, new_data)
-    print(result)
-    status_code = 200 if result["success"] else 404
-    return jsonify(result), status_code
+        # Validación básica de campos obligatorios
+        required_fields = ["title", "description", "price", "currency", "images", "payment_methods", "seller", "additional_details"]
+        missing = [field for field in required_fields if field not in new_data]
+        if missing:
+            return jsonify({"success": False, "message": f"Missing fields: {', '.join(missing)}"}), 400
+
+        result = update_article_process(article_id, new_data)
+        logging.info(f"Update result for {article_id}: {result}")
+
+        if result.get("success"):
+            return jsonify(result), 200
+        else:
+            return jsonify(result), 404
+    except Exception as e:
+        logging.error(f"Error updating article {article_id}: {str(e)}")
+        return jsonify({"success": False, "message": "Internal server error"}), 500

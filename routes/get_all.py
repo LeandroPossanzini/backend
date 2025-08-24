@@ -1,3 +1,4 @@
+import logging
 from flask import Blueprint, jsonify, request
 from process.featured_service import fetch_all_featured
 from utils.decode import decode_token
@@ -77,19 +78,28 @@ def get_all():
                 items:
                   type: string
     """
-    auth_header = request.headers.get("Authorization")  # Revisamos si envían Authorization
-    token = None
-    username = None
-    if auth_header and auth_header.startswith("Bearer "):
-        token = auth_header.split(" ")[1] 
-        username = decode_token(token)
+    try:
+        auth_header = request.headers.get("Authorization")
+        token = None
+        username = None
+        if auth_header and auth_header.startswith("Bearer "):
+            token = auth_header.split(" ")[1]
+            try:
+                username = decode_token(token)
+            except Exception as e:
+                logging.warning(f"Token inválido: {str(e)}")
+                return jsonify({"error": "Token inválido"}), 401
 
-    if username:
-        last_search = get_last_search(username)
-        if last_search:
-            products = process_search(last_search, username)
-            return jsonify(products), 200
+        if username:
+            last_search = get_last_search(username)
+            if last_search:
+                products = process_search(last_search, username)
+                logging.info(f"Usuario '{username}' - Última búsqueda: '{last_search}'")
+                return jsonify(products), 200
 
-    # Si no hay token o no hay búsqueda previa → devolvemos destacados
-    products = fetch_all_featured()
-    return jsonify(products), 200
+        products = fetch_all_featured()
+        logging.info("Productos destacados devueltos")
+        return jsonify(products), 200
+    except Exception as e:
+        logging.error(f"Error en get_all: {str(e)}")
+        return jsonify({"error": "Internal server error"}), 500
