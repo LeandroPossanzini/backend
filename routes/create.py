@@ -1,3 +1,4 @@
+import logging
 from flask import Blueprint, request, jsonify
 from utils.auth import token_required
 from process.articles_service import create_article_process
@@ -109,10 +110,24 @@ def create_article():
               type: boolean
               example: false
     """
-    new_data = request.json
-    if not new_data:
-        return jsonify({"success": False, "message": "No data provided"}), 400
+    try:
+        new_data = request.get_json()
+        if not new_data:
+            return jsonify({"success": False, "message": "No data provided"}), 400
 
-    result = create_article_process(new_data)
-    status_code = 201 if result["success"] else 400
-    return jsonify(result), status_code
+        required_fields = [
+            "title", "description", "price", "currency", "images",
+            "payment_methods", "seller", "additional_details"
+        ]
+        missing = [field for field in required_fields if field not in new_data]
+        if missing:
+            return jsonify({"success": False, "message": f"Missing fields: {', '.join(missing)}"}), 400
+
+        result = create_article_process(new_data)
+        logging.info(f"Intento de creación de artículo: {new_data.get('title')}, resultado: {result}")
+
+        status_code = 201 if result.get("success") else 400
+        return jsonify(result), status_code
+    except Exception as e:
+        logging.error(f"Error al crear artículo: {str(e)}")
+        return jsonify({"success": False, "message": "Internal server error"}), 500

@@ -444,5 +444,33 @@
             "warranty": "12 meses",
             "category": "WEB"
         }
+    },
+    {
+        "id": "MLA100016",
+        "title": "PRUEBA DESDE POSTMAN FINAL''",
+        "description": "Monitor curvo 300 POSTMAN pulgadas Full HD, 144Hz",
+        "price": 120000,
+        "currency": "ARS",
+        "images": [
+            "https://example.com/monitor1.jpg",
+            "https://example.com/monitor2.jpg"
+        ],
+        "payment_methods": [
+            "Efectivo",
+            "Tarjeta",
+            "MercadoPago"
+        ],
+        "seller": {
+            "name": "Tech Store",
+            "rating": 4.8,
+            "reputation": "Platinum"
+        },
+        "additional_details": {
+            "stock": 42,
+            "rating": 4.7,
+            "reviews": 1980000,
+            "warranty": "12 meses de garant\u00eda oficial",
+            "category": "Tecnologia"
+        }
     }
 ]

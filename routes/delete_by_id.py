@@ -1,3 +1,4 @@
+import logging
 from flask import Blueprint, jsonify
 from utils.auth import token_required
 from process.articles_service import delete_article_process
@@ -49,5 +50,14 @@ def delete_by_id(article_id):
               type: boolean
               example: false
     """
-    result = delete_article_process(article_id)
-    return jsonify(result), (200 if result["success"] else 404)
+    try:
+        result = delete_article_process(article_id)
+        logging.info(f"Intento de eliminación de artículo: {article_id}, resultado: {result}")
+
+        if result.get("success"):
+            return jsonify(result), 200
+        else:
+            return jsonify(result), 404
+    except Exception as e:
+        logging.error(f"Error al eliminar artículo {article_id}: {str(e)}")
+        return jsonify({"success": False, "message": "Internal server error"}), 500

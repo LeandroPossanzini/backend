@@ -1,4 +1,5 @@
-from flask import Blueprint, request
+import logging
+from flask import Blueprint, request, jsonify
 from process.auth_service import login_user
 
 login_bp = Blueprint("login", __name__)
@@ -64,9 +65,20 @@ def login():
               type: string
               example: "Username y password son requeridos"
     """
-    data = request.get_json()
-    username = data.get("username") if data else None
-    password = data.get("password") if data else None
+    try:
+        data = request.get_json()
+        if not data:
+            return jsonify({"error": "Request body must be JSON"}), 400
 
-    response, status = login_user(username, password)
-    return response, status
+        username = data.get("username")
+        password = data.get("password")
+
+        if not username or not password:
+            return jsonify({"error": "Username y password son requeridos"}), 400
+
+        response, status = login_user(username, password)
+        logging.info(f"Intento de login para usuario: {username}, status: {status}")
+        return response, status
+    except Exception as e:
+        logging.error(f"Error en login de usuario: {str(e)}")
+        return jsonify({"error": "Internal server error"}), 500

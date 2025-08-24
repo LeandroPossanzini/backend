@@ -1,4 +1,5 @@
-from flask import Blueprint, request
+import logging
+from flask import Blueprint, request, jsonify
 from process.user_service import register_user
 
 register_bp = Blueprint("register_bp", __name__)
@@ -50,9 +51,23 @@ def register():
               type: string
               example: "Username y password son requeridos"
     """
-    data = request.get_json()
-    username = data.get("username") if data else None
-    password = data.get("password") if data else None
+    try:
+        data = request.get_json()
+        if not data:
+            return jsonify({"error": "Request body must be JSON"}), 400
 
-    response, status = register_user(username, password)
-    return response, status
+        username = data.get("username")
+        password = data.get("password")
+
+        if not username or not password:
+            return jsonify({"error": "Username y password son requeridos"}), 400
+
+        if len(password) < 3:
+            return jsonify({"error": "La contraseña debe tener al menos 3 caracteres"}), 400
+
+        response, status = register_user(username, password)
+        logging.info(f"Intento de registro para usuario: {username}, status: {status}")
+        return response, status if status != 200 else 201
+    except Exception as e:
+        logging.error(f"Error en registro de usuario: {str(e)}")
+        return jsonify({"error": "Internal server error"}), 500
