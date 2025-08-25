@@ -1,0 +1,105 @@
+import logging
+from flask import Blueprint, jsonify, request
+from process.featured_service import fetch_all_featured
+from utils.decode import decode_token
+from process.last_serch_service import get_last_search
+from process.most_searched import process_search
+
+get_all_bp = Blueprint("get_all_bp", __name__)
+
+@get_all_bp.route("/get_all", methods=["GET"])
+def get_all():
+    """
+    Obtener productos destacados o por última búsqueda
+    ---
+    tags:
+      - Productos
+    description: >
+      Este endpoint devuelve una lista de productos. 
+      - Si se envía un token de autorización válido y el usuario tiene una última búsqueda registrada, se devuelven los productos que coinciden con esa búsqueda.
+      - Si no se envía token o no hay búsqueda previa, se devuelven los productos destacados.
+      No requiere autenticación para acceder.
+    parameters:
+      - name: Authorization
+        in: header
+        type: string
+        required: false
+        description: Token JWT con formato "Bearer <token>"
+    responses:
+      200:
+        description: Lista de productos
+        schema:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              title:
+                type: string
+              description:
+                type: string
+              price:
+                type: number
+              currency:
+                type: string
+              images:
+                type: array
+                items:
+                  type: string
+              seller:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  name:
+                    type: string
+                  location:
+                    type: string
+                  reputation:
+                    type: string
+                  sales:
+                    type: integer
+              additional_details:
+                type: object
+                properties:
+                  category:
+                    type: string
+                  rating:
+                    type: number
+                  reviews:
+                    type: integer
+                  stock:
+                    type: integer
+                  warranty:
+                    type: string
+              payment_methods:
+                type: array
+                items:
+                  type: string
+    """
+    try:
+        auth_header = request.headers.get("Authorization")
+        token = None
+        username = None
+        if auth_header and auth_header.startswith("Bearer "):
+            token = auth_header.split(" ")[1]
+            try:
+                username = decode_token(token)
+            except Exception as e:
+                logging.warning(f"Token inválido: {str(e)}")
+                return jsonify({"error": "Token inválido"}), 401
+
+        if username:
+            last_search = get_last_search(username)
+            if last_search:
+                products = process_search(last_search, username)
+                logging.info(f"Usuario '{username}' - Última búsqueda: '{last_search}'")
+                return jsonify(products), 200
+
+        products = fetch_all_featured()
+        logging.info("Productos destacados devueltos")
+        return jsonify(products), 200
+    except Exception as e:
+        logging.error(f"Error en get_all: {str(e)}")
+        return jsonify({"error": "Internal server error"}), 500

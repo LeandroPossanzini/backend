@@ -1,0 +1,495 @@
+[
+    {
+        "id": "MLA100001",
+        "title": "Auriculares Inal\u00e1mbricos Bluetooth",
+        "description": [
+            "Auriculares inal\u00e1mbricos con cancelaci\u00f3n de ruido",
+            "micr\u00f3fono incorporado y hasta 30 horas de bater\u00eda. Compatibles con iOS",
+            "Android y PC."
+        ],
+        "price": "100.99",
+        "currency": "ARS",
+        "images": [
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
+        ],
+        "payment_methods": [
+            "Tarjeta de cr\u00e9dito",
+            "Tarjeta de d\u00e9bito",
+            "MercadoPago",
+            "Transferencia bancaria"
+        ],
+        "seller": {
+            "id": "SELLER001",
+            "location": [
+                "CABA",
+                "Argentina"
+            ],
+            "name": "TechStore Oficial",
+            "reputation": "Platinum",
+            "sales": "15320"
+        },
+        "additional_details": {
+            "category": "Tecnologia",
+            "rating": "4.7",
+            "reviews": 1250,
+            "stock": "42",
+            "warranty": "12 meses de garant\u00eda oficial"
+        }
+    },
+    {
+        "id": "MLA100002",
+        "title": "Mouse Gamer Inal\u00e1mbrico",
+        "description": "Mouse gamer con sensor de alta precisi\u00f3n, RGB personalizable y hasta 20 horas de bater\u00eda.",
+        "price": 15999.5,
+        "currency": "ARS",
+        "images": [
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
+        ],
+        "payment_methods": [
+            "Tarjeta de cr\u00e9dito",
+            "MercadoPago"
+        ],
+        "seller": {
+            "id": "SELLER002",
+            "name": "GamerTech",
+            "reputation": "Gold",
+            "location": "Rosario, Argentina",
+            "sales": 8420
+        },
+        "additional_details": {
+            "stock": 30,
+            "rating": 4.5,
+            "reviews": 850,
+            "warranty": "6 meses de garant\u00eda",
+            "category": "Tecnologia"
+        }
+    },
+    {
+        "id": "MLA100003",
+        "title": "Teclado Mec\u00e1nico RGB",
+        "description": "Teclado mec\u00e1nico con switches azules, retroiluminaci\u00f3n RGB y reposamu\u00f1ecas extra\u00edble.",
+        "price": 18999,
+        "currency": "ARS",
+        "images": [
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
+        ],
+        "payment_methods": [
+            "Tarjeta de d\u00e9bito",
+            "MercadoPago",
+            "Transferencia bancaria"
+        ],
+        "seller": {
+            "id": "SELLER003",
+            "name": "TechWorld",
+            "reputation": "Silver",
+            "location": "Mendoza, Argentina",
+            "sales": 4200
+        },
+        "additional_details": {
+            "stock": 25,
+            "rating": 4.3,
+            "reviews": 520,
+            "warranty": "12 meses",
+            "category": "Tecnologia"
+        }
+    },
+    {
+        "id": "MLA100004",
+        "title": "Smartwatch Deportivo",
+        "description": "Smartwatch con GPS, monitor de frecuencia card\u00edaca y resistencia al agua hasta 50 metros.",
+        "price": 29999.99,
+        "currency": "ARS",
+        "images": [
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
+        ],
+        "payment_methods": [
+            "Tarjeta de cr\u00e9dito",
+            "MercadoPago"
+        ],
+        "seller": {
+            "id": "SELLER004",
+            "name": "FitTech",
+            "reputation": "Platinum",
+            "location": "CABA, Argentina",
+            "sales": 9700
+        },
+        "additional_details": {
+            "stock": 50,
+            "rating": 4.8,
+            "reviews": 1340,
+            "warranty": "12 meses",
+            "category": "Tecnologia"
+        }
+    },
+    {
+        "id": "MLA100005",
+        "title": "C\u00e1mara Web HD",
+        "description": "C\u00e1mara web Full HD con micr\u00f3fono incorporado y enfoque autom\u00e1tico, ideal para streaming y videollamadas.",
+        "price": 12999.99,
+        "currency": "ARS",
+        "images": [
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
+        ],
+        "payment_methods": [
+            "Tarjeta de cr\u00e9dito",
+            "Tarjeta de d\u00e9bito",
+            "MercadoPago"
+        ],
+        "seller": {
+            "id": "SELLER005",
+            "name": "CamTech",
+            "reputation": "Gold",
+            "location": "C\u00f3rdoba, Argentina",
+            "sales": 6300
+        },
+        "additional_details": {
+            "stock": 40,
+            "rating": 4.4,
+            "reviews": 710,
+            "warranty": "6 meses",
+            "category": "Tecnologia"
+        }
+    },
+    {
+        "id": "MLA100006",
+        "title": "Auriculares Gaming con Micr\u00f3fono",
+        "description": "Auriculares con sonido envolvente 7.1 y micr\u00f3fono retr\u00e1ctil, dise\u00f1ados para gaming profesional.",
+        "price": 21999.5,
+        "currency": "ARS",
+        "images": [
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
+        ],
+        "payment_methods": [
+            "Tarjeta de cr\u00e9dito",
+            "MercadoPago",
+            "Transferencia bancaria"
+        ],
+        "seller": {
+            "id": "SELLER006",
+            "name": "GamerStore",
+            "reputation": "Platinum",
+            "location": "Rosario, Argentina",
+            "sales": 11200
+        },
+        "additional_details": {
+            "stock": 35,
+            "rating": 4.6,
+            "reviews": 1020,
+            "warranty": "12 meses",
+            "category": "Almacen"
+        }
+    },
+    {
+        "id": "MLA100007",
+        "title": "Tablet 10 Pulgadas",
+        "description": "Tablet con pantalla HD, 64GB de almacenamiento y sistema operativo Android 13.",
+        "price": 44999.99,
+        "currency": "ARS",
+        "images": [
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
+        ],
+        "payment_methods": [
+            "Tarjeta de cr\u00e9dito",
+            "MercadoPago"
+        ],
+        "seller": {
+            "id": "SELLER007",
+            "name": "TabStore",
+            "reputation": "Gold",
+            "location": "Mendoza, Argentina",
+            "sales": 5400
+        },
+        "additional_details": {
+            "stock": 28,
+            "rating": 4.5,
+            "reviews": 630,
+            "warranty": "12 meses",
+            "category": "Almacen"
+        }
+    },
+    {
+        "id": "MLA100008",
+        "title": "Parlante Bluetooth Port\u00e1til",
+        "description": "Parlante port\u00e1til con sonido est\u00e9reo, 12 horas de bater\u00eda y resistencia al agua.",
+        "price": 13999.99,
+        "currency": "ARS",
+        "images": [
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
+        ],
+        "payment_methods": [
+            "Tarjeta de d\u00e9bito",
+            "MercadoPago"
+        ],
+        "seller": {
+            "id": "SELLER008",
+            "name": "SoundTech",
+            "reputation": "Silver",
+            "location": "CABA, Argentina",
+            "sales": 4100
+        },
+        "additional_details": {
+            "stock": 60,
+            "rating": 4.3,
+            "reviews": 470,
+            "warranty": "6 meses",
+            "category": "Almacen"
+        }
+    },
+    {
+        "id": "MLA100009",
+        "title": "Disco SSD 1TB",
+        "description": "Disco s\u00f3lido SSD de 1TB con interfaz NVMe para velocidad m\u00e1xima de lectura/escritura.",
+        "price": 29999.99,
+        "currency": "ARS",
+        "images": [
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
+        ],
+        "payment_methods": [
+            "Tarjeta de cr\u00e9dito",
+            "MercadoPago",
+            "Transferencia bancaria"
+        ],
+        "seller": {
+            "id": "SELLER009",
+            "name": "MemoryStore",
+            "reputation": "Platinum",
+            "location": "C\u00f3rdoba, Argentina",
+            "sales": 8900
+        },
+        "additional_details": {
+            "stock": 22,
+            "rating": 4.7,
+            "reviews": 950,
+            "warranty": "12 meses",
+            "category": "Almacen"
+        }
+    },
+    {
+        "id": "MLA100010",
+        "title": "Monitor 24 Pulgadas Full HD",
+        "description": "Monitor LED Full HD de 24 pulgadas con conectividad HDMI y DisplayPort.",
+        "price": 59999.99,
+        "currency": "ARS",
+        "images": [
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
+        ],
+        "payment_methods": [
+            "Tarjeta de cr\u00e9dito",
+            "MercadoPago"
+        ],
+        "seller": {
+            "id": "SELLER010",
+            "name": "DisplayTech",
+            "reputation": "Gold",
+            "location": "Rosario, Argentina",
+            "sales": 7300
+        },
+        "additional_details": {
+            "stock": 18,
+            "rating": 4.6,
+            "reviews": 780,
+            "warranty": "12 meses",
+            "category": "Almacen"
+        }
+    },
+    {
+        "id": "MLA100011",
+        "title": "Smartphone 128GB",
+        "description": "Smartphone con pantalla AMOLED, 128GB de almacenamiento y c\u00e1mara triple 48MP.",
+        "price": 109999.99,
+        "currency": "ARS",
+        "images": [
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
+        ],
+        "payment_methods": [
+            "Tarjeta de cr\u00e9dito",
+            "MercadoPago"
+        ],
+        "seller": {
+            "id": "SELLER011",
+            "name": "PhoneStore",
+            "reputation": "Platinum",
+            "location": "CABA, Argentina",
+            "sales": 15400
+        },
+        "additional_details": {
+            "stock": 12,
+            "rating": 4.8,
+            "reviews": 2100,
+            "warranty": "12 meses",
+            "category": "Deporte"
+        }
+    },
+    {
+        "id": "MLA100012",
+        "title": "C\u00e1mara Fotogr\u00e1fica DSLR",
+        "description": "C\u00e1mara DSLR con lente 18-55mm, sensor de 24MP y grabaci\u00f3n Full HD.",
+        "price": 149999.99,
+        "currency": "ARS",
+        "images": [
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
+        ],
+        "payment_methods": [
+            "Tarjeta de cr\u00e9dito",
+            "MercadoPago",
+            "Transferencia bancaria"
+        ],
+        "seller": {
+            "id": "SELLER012",
+            "name": "FotoPro",
+            "reputation": "Gold",
+            "location": "Mendoza, Argentina",
+            "sales": 6200
+        },
+        "additional_details": {
+            "stock": 8,
+            "rating": 4.7,
+            "reviews": 1150,
+            "warranty": "12 meses",
+            "category": "Deporte"
+        }
+    },
+    {
+        "id": "MLA100013",
+        "title": "Router WiFi 6",
+        "description": "Router con WiFi 6, cobertura hasta 200m\u00b2 y 4 puertos LAN gigabit.",
+        "price": 21999.99,
+        "currency": "ARS",
+        "images": [
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
+        ],
+        "payment_methods": [
+            "Tarjeta de cr\u00e9dito",
+            "MercadoPago"
+        ],
+        "seller": {
+            "id": "SELLER013",
+            "name": "NetTech",
+            "reputation": "Silver",
+            "location": "C\u00f3rdoba, Argentina",
+            "sales": 4100
+        },
+        "additional_details": {
+            "stock": 30,
+            "rating": 4.4,
+            "reviews": 590,
+            "warranty": "12 meses",
+            "category": "Deporte"
+        }
+    },
+    {
+        "id": "MLA100014",
+        "title": "Aud\u00edfonos Deportivos Bluetooth",
+        "description": "Aud\u00edfonos resistentes al agua, con bater\u00eda de 15 horas y ajuste ergon\u00f3mico para deportes.",
+        "price": 17999.99,
+        "currency": "ARS",
+        "images": [
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
+        ],
+        "payment_methods": [
+            "Tarjeta de cr\u00e9dito",
+            "MercadoPago"
+        ],
+        "seller": {
+            "id": "SELLER014",
+            "name": "SportAudio",
+            "reputation": "Gold",
+            "location": "Rosario, Argentina",
+            "sales": 5200
+        },
+        "additional_details": {
+            "stock": 40,
+            "rating": 4.5,
+            "reviews": 720,
+            "warranty": "6 meses",
+            "category": "Deporte"
+        }
+    },
+    {
+        "id": "MLA100015",
+        "title": "prueba desde el postman con mejor reviews!!!!",
+        "description": "Disco duro externo USB 3.0 de 50TB, port\u00e1til y resistente a golpes. Ahora con nueva garant\u00eda extendida.",
+        "price": 25999.99,
+        "currency": "ARS",
+        "images": [
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
+        ],
+        "payment_methods": [
+            "Tarjeta de cr\u00e9dito",
+            "MercadoPago",
+            "Transferencia bancaria",
+            "Efectivo"
+        ],
+        "seller": {
+            "id": "SELLER017",
+            "name": "StorageTech",
+            "reputation": "Platinum",
+            "location": "CABA, Argentina",
+            "sales": 10300
+        },
+        "additional_details": {
+            "stock": 20,
+            "rating": 4.6,
+            "reviews": 20081000,
+            "warranty": "12 meses",
+            "category": "Deporte"
+        }
+    },
+    {
+        "id": "MLA100016",
+        "title": "PRUEBA DESDE POSTMAN FINAL''",
+        "description": "Monitor curvo 300 POSTMAN pulgadas Full HD, 144Hz",
+        "price": 120000,
+        "currency": "ARS",
+        "images": [
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
+        ],
+        "payment_methods": [
+            "Efectivo",
+            "Tarjeta",
+            "MercadoPago"
+        ],
+        "seller": {
+            "name": "Tech Store",
+            "rating": 4.8,
+            "reputation": "Platinum"
+        },
+        "additional_details": {
+            "stock": 42,
+            "rating": 4.7,
+            "reviews": 1980000,
+            "warranty": "12 meses de garant\u00eda oficial",
+            "category": "Tecnologia"
+        }
+    },
+    {
+        "id": "MLA100017",
+        "title": "prueba desde el postman con mejor reviews!!!!",
+        "description": "Disco duro externo USB 3.0 de 50TB, port\u00e1til y resistente a golpes. Ahora con nueva garant\u00eda extendida.",
+        "price": 25999.99,
+        "currency": "ARS",
+        "images": [
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
+        ],
+        "payment_methods": [
+            "Tarjeta de cr\u00e9dito",
+            "MercadoPago",
+            "Transferencia bancaria",
+            "Efectivo"
+        ],
+        "seller": {
+            "id": "SELLER017",
+            "name": "StorageTech",
+            "reputation": "Platinum",
+            "location": "CABA, Argentina",
+            "sales": 10300
+        },
+        "additional_details": {
+            "stock": 20,
+            "rating": 4.6,
+            "reviews": 20081000,
+            "warranty": "12 meses",
+            "category": "Deporte"
+        }
+    }
+]
