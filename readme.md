@@ -38,7 +38,7 @@ pip install -r requirements.txt
 ### 4️⃣ Ejecutar el proceso batch
 > Necesario antes de iniciar la app
 ```bash
-python process_batch.py
+python process/batch/featured_products.py
 ```
 
 ### 5️⃣ Levantar el servidor
