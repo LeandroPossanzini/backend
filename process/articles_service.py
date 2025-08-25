@@ -23,8 +23,8 @@ def validate_product_data(new_data: dict) -> (bool, str):
             return False, f"Field '{field}' cannot be empty."
     if not isinstance(new_data.get("price"), (int, float)):
         return False, "Field 'price' must be a number."
-    if not isinstance(new_data.get("images"), list):
-        return False, "Field 'images' must be a list."
+    if not isinstance(new_data.get("additional_details", {}).get("reviews"), int):
+        return False, "Field 'reviews' must be a number."
     return True, ""
 
 def update_article_process(article_id: str, new_data: dict) -> dict:
