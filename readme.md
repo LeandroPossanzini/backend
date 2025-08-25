@@ -1,9 +1,5 @@
 # 🚀 Proyecto Fullstack
 
-[![Python](https://img.shields.io/badge/python-3.11-blue)](https://www.python.org/)
-[![Build](https://img.shields.io/badge/build-passing-brightgreen)](#)
-[![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)](#)
-
 Este proyecto se divide en **Backend** y **Frontend**, cada uno en su propio repositorio. A continuación se detallan los pasos para levantar todo el entorno de desarrollo correctamente.
 
 ---
