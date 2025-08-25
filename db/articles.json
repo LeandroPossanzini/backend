@@ -10,9 +10,7 @@
         "price": "100.99",
         "currency": "ARS",
         "images": [
-            "https://example.com/images/auriculares1.jpg",
-            "https://example.com/images/auriculares2.jpg",
-            "https://example.com/images/auriculares3.jpg"
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
         ],
         "payment_methods": [
             "Tarjeta de cr\u00e9dito",
@@ -33,7 +31,7 @@
         "additional_details": {
             "category": "Tecnologia",
             "rating": "4.7",
-            "reviews": "1250",
+            "reviews": 1250,
             "stock": "42",
             "warranty": "12 meses de garant\u00eda oficial"
         }
@@ -45,8 +43,7 @@
         "price": 15999.5,
         "currency": "ARS",
         "images": [
-            "https://example.com/images/mouse1.jpg",
-            "https://example.com/images/mouse2.jpg"
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
         ],
         "payment_methods": [
             "Tarjeta de cr\u00e9dito",
@@ -74,8 +71,7 @@
         "price": 18999,
         "currency": "ARS",
         "images": [
-            "https://example.com/images/teclado1.jpg",
-            "https://example.com/images/teclado2.jpg"
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
         ],
         "payment_methods": [
             "Tarjeta de d\u00e9bito",
@@ -104,8 +100,7 @@
         "price": 29999.99,
         "currency": "ARS",
         "images": [
-            "https://example.com/images/smartwatch1.jpg",
-            "https://example.com/images/smartwatch2.jpg"
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
         ],
         "payment_methods": [
             "Tarjeta de cr\u00e9dito",
@@ -133,8 +128,7 @@
         "price": 12999.99,
         "currency": "ARS",
         "images": [
-            "https://example.com/images/webcam1.jpg",
-            "https://example.com/images/webcam2.jpg"
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
         ],
         "payment_methods": [
             "Tarjeta de cr\u00e9dito",
@@ -163,8 +157,7 @@
         "price": 21999.5,
         "currency": "ARS",
         "images": [
-            "https://example.com/images/gamingheadset1.jpg",
-            "https://example.com/images/gamingheadset2.jpg"
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
         ],
         "payment_methods": [
             "Tarjeta de cr\u00e9dito",
@@ -193,8 +186,7 @@
         "price": 44999.99,
         "currency": "ARS",
         "images": [
-            "https://example.com/images/tablet1.jpg",
-            "https://example.com/images/tablet2.jpg"
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
         ],
         "payment_methods": [
             "Tarjeta de cr\u00e9dito",
@@ -222,8 +214,7 @@
         "price": 13999.99,
         "currency": "ARS",
         "images": [
-            "https://example.com/images/speaker1.jpg",
-            "https://example.com/images/speaker2.jpg"
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
         ],
         "payment_methods": [
             "Tarjeta de d\u00e9bito",
@@ -251,8 +242,7 @@
         "price": 29999.99,
         "currency": "ARS",
         "images": [
-            "https://example.com/images/ssd1.jpg",
-            "https://example.com/images/ssd2.jpg"
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
         ],
         "payment_methods": [
             "Tarjeta de cr\u00e9dito",
@@ -281,8 +271,7 @@
         "price": 59999.99,
         "currency": "ARS",
         "images": [
-            "https://example.com/images/monitor1.jpg",
-            "https://example.com/images/monitor2.jpg"
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
         ],
         "payment_methods": [
             "Tarjeta de cr\u00e9dito",
@@ -310,8 +299,7 @@
         "price": 109999.99,
         "currency": "ARS",
         "images": [
-            "https://example.com/images/smartphone1.jpg",
-            "https://example.com/images/smartphone2.jpg"
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
         ],
         "payment_methods": [
             "Tarjeta de cr\u00e9dito",
@@ -339,8 +327,7 @@
         "price": 149999.99,
         "currency": "ARS",
         "images": [
-            "https://example.com/images/camera1.jpg",
-            "https://example.com/images/camera2.jpg"
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
         ],
         "payment_methods": [
             "Tarjeta de cr\u00e9dito",
@@ -369,8 +356,7 @@
         "price": 21999.99,
         "currency": "ARS",
         "images": [
-            "https://example.com/images/router1.jpg",
-            "https://example.com/images/router2.jpg"
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
         ],
         "payment_methods": [
             "Tarjeta de cr\u00e9dito",
@@ -398,8 +384,7 @@
         "price": 17999.99,
         "currency": "ARS",
         "images": [
-            "https://example.com/images/sportheadphones1.jpg",
-            "https://example.com/images/sportheadphones2.jpg"
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
         ],
         "payment_methods": [
             "Tarjeta de cr\u00e9dito",
@@ -422,27 +407,32 @@
     },
     {
         "id": "MLA100015",
-        "title": "producto desde la web",
-        "description": "algo",
-        "price": 10025.5,
+        "title": "prueba desde el postman con mejor reviews!!!!",
+        "description": "Disco duro externo USB 3.0 de 50TB, port\u00e1til y resistente a golpes. Ahora con nueva garant\u00eda extendida.",
+        "price": 25999.99,
         "currency": "ARS",
         "images": [
-            "www.gooogle.com"
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
         ],
         "payment_methods": [
-            "tarjeta"
+            "Tarjeta de cr\u00e9dito",
+            "MercadoPago",
+            "Transferencia bancaria",
+            "Efectivo"
         ],
         "seller": {
-            "name": "leandro",
-            "rating": 4.2,
-            "reputation": "100"
+            "id": "SELLER017",
+            "name": "StorageTech",
+            "reputation": "Platinum",
+            "location": "CABA, Argentina",
+            "sales": 10300
         },
         "additional_details": {
-            "stock": 2,
-            "rating": 6.5,
-            "reviews": 5200,
+            "stock": 20,
+            "rating": 4.6,
+            "reviews": 20081000,
             "warranty": "12 meses",
-            "category": "WEB"
+            "category": "Deporte"
         }
     },
     {
@@ -452,8 +442,7 @@
         "price": 120000,
         "currency": "ARS",
         "images": [
-            "https://example.com/monitor1.jpg",
-            "https://example.com/monitor2.jpg"
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
         ],
         "payment_methods": [
             "Efectivo",
@@ -471,6 +460,36 @@
             "reviews": 1980000,
             "warranty": "12 meses de garant\u00eda oficial",
             "category": "Tecnologia"
+        }
+    },
+    {
+        "id": "MLA100017",
+        "title": "prueba desde el postman con mejor reviews!!!!",
+        "description": "Disco duro externo USB 3.0 de 50TB, port\u00e1til y resistente a golpes. Ahora con nueva garant\u00eda extendida.",
+        "price": 25999.99,
+        "currency": "ARS",
+        "images": [
+            "https://dummyimage.com/400x200/ff6666/ffffff&text=PRODUCT"
+        ],
+        "payment_methods": [
+            "Tarjeta de cr\u00e9dito",
+            "MercadoPago",
+            "Transferencia bancaria",
+            "Efectivo"
+        ],
+        "seller": {
+            "id": "SELLER017",
+            "name": "StorageTech",
+            "reputation": "Platinum",
+            "location": "CABA, Argentina",
+            "sales": 10300
+        },
+        "additional_details": {
+            "stock": 20,
+            "rating": 4.6,
+            "reviews": 20081000,
+            "warranty": "12 meses",
+            "category": "Deporte"
         }
     }
 ]

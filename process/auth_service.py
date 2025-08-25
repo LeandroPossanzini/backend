@@ -1,5 +1,5 @@
 import jwt
-import datetime
+from datetime import datetime, timedelta, timezone
 import logging
 import os
 from system.user_repository import get_all_users
@@ -18,7 +18,7 @@ def login_user(username: str, password: str) -> tuple[dict, int]:
                 try:
                     payload = {
                         "username": username,
-                        "exp": datetime.datetime.utcnow() + datetime.timedelta(hours=1)
+                        "exp": datetime.now(timezone.utc) + timedelta(hours=1)  
                     }
                     token = jwt.encode(payload, SECRET_KEY, algorithm="HS256")
                 except Exception as e:
